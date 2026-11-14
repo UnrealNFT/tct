@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --beatcoin-primary: #242424;
+  --beatcoin-dark: #1a1a1a;
+  --beatcoin-light: #a0a0a0;
+  --beatcoin-red: #ff5c5c;
+  --beatcoin-green: #1db954;
+  --beatcoin-bg: #333333;
+}
+
+.beatcoin-app {
+  min-height: 100vh;
+  background: var(--beatcoin-bg);
+  color: var(--beatcoin-light);
+}
+
+.beatcoin-header {
+  background: var(--beatcoin-primary);
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.beatcoin-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.beatcoin-logo {
+  max-width: 180px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.beatcoin-nav ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.beatcoin-nav a {
+  background: var(--beatcoin-light);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--beatcoin-dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.beatcoin-nav a:hover {
+  background: var(--beatcoin-dark);
+  color: var(--beatcoin-light);
+}
+
+.beatcoin-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.beatcoin-trending {
+  background-color: #030303;
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 854px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.beatcoin-trending h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.beatcoin-trending h5 {
+  color: var(--beatcoin-light);
+  margin: 0;
+}
+
+.artist-name {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.music-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-heart {
+  background-color: var(--beatcoin-red);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn-buy {
+  background-color: var(--beatcoin-green);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.beatcoin-form {
+  background: var(--beatcoin-primary);
+  padding: 24px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.beatcoin-form label {
+  display: block;
+  margin: 16px 0 6px;
+  color: white;
+}
+
+.beatcoin-form input,
+.beatcoin-form select,
+.beatcoin-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #474747;
+  color: white;
+}
+
+.beatcoin-form input[type='file'] {
+  padding: 6px;
+}
+
+.beatcoin-form input[type='range'] {
+  accent-color: var(--beatcoin-green);
+}
+
+.beatcoin-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: var(--beatcoin-green);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 260px;
+  background: #474747;
+  color: white;
+}
+
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.market-card {
+  background: #3d3d3d;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-4px);
+}
+
+.market-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.market-card h3 {
+  color: white;
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.market-card .price {
+  color: var(--beatcoin-green);
+  font-weight: bold;
+}
+
+.player-card {
+  background: #636363;
+  border-radius: 10px;
+  padding: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.player-cover {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.player-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.player-controls button {
+  background: #474747;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+.player-controls button.play-btn {
+  width: 64px;
+  height: 64px;
+  background: var(--beatcoin-green);
+}
+
+.timeline {
+  background: #570d0d;
+  border-radius: 5px;
+  height: 6px;
+  position: relative;
+  cursor: pointer;
+  margin: 12px 0;
+}
+
+.progress {
+  background: var(--beatcoin-green);
+  height: 100%;
+  border-radius: 5px;
+  width: 0%;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .beatcoin-nav ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
